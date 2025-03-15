@@ -1,0 +1,111 @@
+/* Navbar พื้นฐาน */
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background: rgb(143, 106, 255);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* เมนู */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin-right:50px ;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffcc00;
+  }
+  
+  /* ปุ่มเมนูมือถือ */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Responsive สำหรับอุปกรณ์เล็ก */
+  @media (max-width: 768px) {
+    .navbar {
+      height: 60px; /* ลดขนาด Navbar */
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 0;
+    }
+  
+    .navbar.open .nav-links {
+      display: flex;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+  
+  /* Responsive สำหรับจอใหญ่ขึ้น */
+  @media (min-width: 1024px) {
+    .navbar {
+      height: 80px; /* ขยาย Navbar */
+      padding: 15px 30px;
+    }
+  
+    .logo {
+      font-size: 28px;
+    }
+  
+    .nav-links a {
+      font-size: 20px;
+    }
+
+    /* เมื่อเลื่อนลง */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    height: 60px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  }
+  
